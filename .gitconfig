@@ -1,0 +1,19 @@
+[user]
+	name = Jono Prest
+	email = jjprest@gmail.com
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[push]
+	default = current
+[init]
+	templateDir = /Users/Jonathan/.git-template
+[alias]
+	ac = commit -am
+	c = checkout
+	fc = !sh -c 'git fetch $1 $2 && git checkout $2' -
+
+[diff]
+	algorithm = patience
