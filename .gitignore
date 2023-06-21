@@ -1,4 +1,7 @@
-*
+* 
 !.gitignore
 !.gitconfig
 !.zshrc
+!.config/
+!.config/zellij/
+!.config/zellij/config.kdl
