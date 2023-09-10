@@ -72,6 +72,7 @@ ZSH_THEME="robbyrussell"
 plugins=(
     # other plugins...
     zsh-autosuggestions
+    vi-mode
 )
 source $ZSH/oh-my-zsh.sh
 
@@ -107,6 +108,7 @@ alias kns="kubens"
 alias kctx="kubectx"
 alias ze="zellij"
 alias chrome="open -a 'Google Chrome'"
+alias tr="tree-rs"
 
 export PATH=$(pyenv root)/shims:$PATH
 
@@ -146,4 +148,12 @@ export PATH=$PATH:/Users/Jonathan/.cargo/bin
 # Set nvim as default editor
 export VISUAL=nvim
 export EDITOR="$VISUAL"
+
+#set key bindings to vi
+# bindkey -v
+VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
+VI_MODE_SET_CURSOR=true
+
+# ignore commands in history that start with a space
+export HISTCONTROL=ignorespace
 
