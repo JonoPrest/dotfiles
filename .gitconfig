@@ -17,3 +17,5 @@
 
 [diff]
 	algorithm = patience
+[core]
+	ignorecase = false
