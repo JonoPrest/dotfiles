@@ -109,6 +109,8 @@ alias kctx="kubectx"
 alias ze="zellij"
 alias chrome="open -a 'Google Chrome'"
 alias tr="tree-rs"
+alias trs="tree-rs -a -L 1"
+alias lenvio="cargo run --manifest-path /Users/Jonathan/Coding/envio/indexer/codegenerator/cli/Cargo.toml --"
 
 export PATH=$(pyenv root)/shims:$PATH
 
@@ -157,3 +159,5 @@ VI_MODE_SET_CURSOR=true
 # ignore commands in history that start with a space
 export HISTCONTROL=ignorespace
 
+
+source /Users/Jonathan/.config/broot/launcher/bash/br
