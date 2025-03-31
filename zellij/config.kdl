@@ -3,7 +3,7 @@ keybinds {
     normal {
         // uncomment this and adjust key if using copy_on_select=false
         // bind "Alt c" { Copy; }
-        bind "Ctrl a" { SwitchToMode "Session"; }
+        // bind "Ctrl a" { SwitchToMode "Session"; }
         unbind "Alt n"
     }
     locked {
@@ -303,7 +303,7 @@ themes {
 //
 // copy_command "xclip -selection clipboard" // x11
 // copy_command "wl-copy"                    // wayland
-// copy_command "pbcopy"                     // osx
+copy_command "pbcopy"                     // osx
 
 // Choose the destination for copied text
 // Allows using the primary selection buffer (on x11/wayland) instead of the system clipboard.

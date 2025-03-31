@@ -99,7 +99,7 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="mate ~/.zshrc"
+alias zshconfig="nvim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias flt="cd /Users/Jonathan/Coding/float"
@@ -112,10 +112,7 @@ alias tr="tree-rs"
 alias trs="tree-rs -a -L 1"
 alias lenvio="cargo run --manifest-path /Users/Jonathan/Coding/envio/indexer/codegenerator/cli/Cargo.toml --"
 
-export PATH=$(pyenv root)/shims:$PATH
-
 export PATH="$PATH:/Users/Jonathan/.foundry/bin"
-eval "$(fnm env --use-on-cd)"
 
 # opam configuration
 [[ ! -r /Users/Jonathan/.opam/opam-init/init.zsh ]] || source /Users/Jonathan/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
@@ -147,6 +144,12 @@ export PATH=$PATH:/Users/Jonathan/go/bin
 # rust
 export PATH=$PATH:/Users/Jonathan/.cargo/bin
 
+
+export PATH=/usr/local/opt/python/libexec/bin:$PATH
+# Conda
+# eval "$(/Users/Jonathan/miniconda3/bin/conda shell.YOUR_SHELL_NAME hook)"
+export PATH=$PATH:/Users/Jonathan/minicona3/bin
+
 # Set nvim as default editor
 export VISUAL=nvim
 export EDITOR="$VISUAL"
@@ -161,3 +164,33 @@ export HISTCONTROL=ignorespace
 
 
 source /Users/Jonathan/.config/broot/launcher/bash/br
+export PATH="$HOME/.fuelup/bin:$PATH"
+
+
+# rescript lsp
+# export PATH=$PATH:/Users/Jonathan/Coding/rescript-libs/lsp-builds/vsix/darwinarm64
+# alias rescript="/Users/Jonathan/Coding/rescript-libs/lsp-builds/vsix/darwinarm64/rescript-tools.exe"
+
+
+# aws profile
+export AWS_PROFILE=envio
+
+#homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+#pyenv
+# export PATH=$(pyenv root)/shims:$PATH
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+eval "$(fnm env --use-on-cd --shell zsh)"
+
+
+export PATH="$HOME/.local/bin:$PATH"
+
+# Load .env file safely
+if [ -f ~/.config/secrets/.env ]; then
+  set -a
+  source ~/.config/secrets/.env
+  set +a
+fi

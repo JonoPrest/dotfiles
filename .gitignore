@@ -1,9 +1,6 @@
 * 
 !.gitignore
-!.gitconfig
 !.zshrc
-!.config/
-!.config/zellij/
-!.config/zellij/config.kdl
-!.config/karabiner/
-!.config/karabiner/
+!zellij/
+!zellij/config.kdl
+!karabiner/
